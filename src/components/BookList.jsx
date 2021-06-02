@@ -15,6 +15,13 @@ class BookList extends Component {
     query: "",
   };
 
+  // getFilteredBooks = (event) =>
+  //   this.state.categories.filter((book) =>
+  //     book.title
+  //       .toLocaleLowerCase()
+  //       .includes(event.currentTarget.value.toLocaleLowerCase())
+  //   );
+
   render() {
     return (
       <Container>
