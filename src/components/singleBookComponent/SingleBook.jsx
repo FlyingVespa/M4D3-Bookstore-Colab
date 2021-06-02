@@ -1,5 +1,4 @@
 import { Card, Col, Badge, Button } from "react-bootstrap";
-
 import "./singleBook.css";
 
 function selectBook(e) {

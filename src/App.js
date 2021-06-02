@@ -33,7 +33,7 @@ const App = () => {
       ></Image>
       <LatestRelease />
       <BookList />
-      {/* <WarningSign text="Oh Dickens, where art thou?" /> */}
+      <WarningSign text="Oh Dickens, where art thou?" />
       <MyFooter />
     </div>
   );
