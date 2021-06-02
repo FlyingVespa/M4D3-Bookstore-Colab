@@ -11,7 +11,7 @@ import MyJumbotron from "./components/jumbotronComponent/Jumbotron.jsx";
 
 
 // import FilterBookList from "./components/FilterbookList.jsx";
-// import WarningSign from "./components/WarningSign.jsx";
+import WarningSign from "./components/WarningSign.jsx";
 import book from "./assets/img/book.jpg";
 
 const imageStyle = {
@@ -35,8 +35,8 @@ const App = () => {
         style={imageStyle}
       ></Image>
       <LatestRelease />
+      <WarningSign text="Oh Dickens, where art thou?" />
       <BookList />
-      {/* <WarningSign text="Oh Dickens, where art thou?" /> */}
       <MyFooter />
     </div>
   );
