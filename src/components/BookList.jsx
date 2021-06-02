@@ -1,5 +1,5 @@
-import { Component } from "react";
-import { Image, Container, Row } from "react-bootstrap";
+import React from "react";
+import {Container, Row } from "react-bootstrap";
 import SingleBook from "./singleBookComponent/SingleBook.jsx";
 
 import Fantasy from "../json/fantasy.json";
@@ -7,13 +7,13 @@ import History from "../json/history.json";
 import Horror from "../json/horror.json";
 import Romance from "../json/romance.json";
 import Scifi from "../json/scifi.json";
+import FilterBooksList from "./FilterBooksList.jsx";
 
-function shuffle(array) {
-  array.sort(() => Math.random() - 0.5);
-}
-class BookList extends Component {
+
+class BookList extends React.Component {
   state = {
     categories: [...Fantasy, ...Horror, ...History, ...Romance, ...Scifi],
+    query: ""
   };
 
   // deselectAllBooks = (e) => {
@@ -22,15 +22,17 @@ class BookList extends Component {
   //     element.remove(".selectCard");
   //   });
   // };
-
   render() {
     return (
       <Container>
+        <FilterBooksList passQuery={(input_value)=> this.setState({query: input_value})}/>
         {/* <Button onClick={this.deselectAllBooks()}>Remove Selc</Button> */}
 
         <h2 className="text-center">List Of Books</h2>
         <Row className="m-2 no-gutters">
-          {this.state.categories.map((book) => (
+          {this.state.categories
+          .filter(book => book.title.toLowerCase().indexOf(this.state.query) !== -1) 
+          .map((book) => (
             <SingleBook
               title={book.title}
               img={book.img}
