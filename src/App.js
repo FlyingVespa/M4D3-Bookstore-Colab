@@ -8,6 +8,8 @@ import BookList from "./components/BookList.jsx";
 import MyNavbar from "./components/headerComponent/Nav.jsx";
 import MyFooter from "./components/footerComponent/Footer.jsx";
 import MyJumbotron from "./components/jumbotronComponent/Jumbotron.jsx";
+
+
 // import FilterBookList from "./components/FilterbookList.jsx";
 // import WarningSign from "./components/WarningSign.jsx";
 import book from "./assets/img/book.jpg";
@@ -25,6 +27,7 @@ const App = () => {
     <div className="App">
       <MyNavbar imgSource="/dickenslogo.png" title="What The Dickens" />
       <MyJumbotron />
+     
       <Image
         className="bgBook"
         src={book}
